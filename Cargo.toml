@@ -1,0 +1,28 @@
+[package]
+name = "hwloc2"
+version = "2.2.0"
+authors = ["Joseph Hirschfeld <j@ibj.io>", "Michael Nitschinger <michael@nitschinger.at>"]
+license = "MIT"
+keywords = ["hwloc"]
+description = "Rust bindings for the hwloc hardware locality library 2.x."
+repository = "https://github.com/Ichbinjoe/hwloc2-rs"
+documentation = "http://docs.rs/hwloc2/2.2.0/hwloc2"
+build = "build.rs"
+links = "hwloc"
+readme = "README.md"
+
+[dependencies]
+libc = "0.2"
+errno = "0.2"
+bitflags = "1.0"
+
+[dependencies.num]
+version = "0.1"
+default-features = false
+
+[build-dependencies]
+pkg-config = "0.3.8"
+
+[target.'cfg(windows)'.dependencies]
+kernel32-sys = "0.2"
+winapi = "0.2"
